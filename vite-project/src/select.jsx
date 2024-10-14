@@ -6,7 +6,6 @@ import Select from "@mui/material/Select";
 import { useColorScheme } from "@mui/material";
 
 export default function SelectSmall() {
-  const [age, setAge] = React.useState("");
   const { mode, setMode } = useColorScheme();
 
   const handleChange = (event) => {

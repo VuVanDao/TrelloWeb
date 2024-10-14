@@ -1,5 +1,13 @@
 import { createTheme } from "@mui/material/styles";
-import { red, blue, yellow } from "@mui/material/colors";
+import {
+  red,
+  blue,
+  yellow,
+  brown,
+  pink,
+  blueGrey,
+  orange,
+} from "@mui/material/colors";
 import { experimental_extendTheme as extendTheme } from "@mui/material/styles";
 // const theme = createTheme({
 //   cssVariables: true,
@@ -20,23 +28,32 @@ import { experimental_extendTheme as extendTheme } from "@mui/material/styles";
 //   },
 // });
 const theme = extendTheme({
+  trelloCustom: {
+    appBarHeight: "70px",
+    boardBarHeight: "80px",
+  },
   colorSchemes: {
     light: {
       palette: {
         primary: {
-          main: yellow[200],
+          main: yellow[100],
         },
         secondary: {
-          main: blue[200],
+          main: blueGrey[100],
         },
       },
+      spacing: (factor) => `${0.25 * factor}rem`,
     },
     dark: {
       palette: {
         primary: {
           main: red[400],
         },
+        secondary: {
+          main: orange[300],
+        },
       },
+      spacing: (factor) => `${0.25 * factor}rem`,
     },
   },
 });
